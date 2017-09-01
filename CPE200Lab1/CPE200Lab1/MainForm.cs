@@ -72,6 +72,7 @@ namespace CPE200Lab1
             }
             lblDisplay.Text += digit;
             isAfterOperater = false;
+            hasDot = false;
         }
 
         private void btnUnaryOperator_Click(object sender, EventArgs e)
@@ -176,7 +177,17 @@ namespace CPE200Lab1
             {
                 return;
             }
-            string secondOperand = lblDisplay.Text;
+
+            if(isAfterEqual == false)
+            {
+                 secondOperand = lblDisplay.Text;
+            }
+            else
+            {
+                firstOperand = lblDisplay.Text;
+            }
+            
+           
             string result = engine.calculate(operate, firstOperand, secondOperand);
             if (result is "E" || result.Length > 8)
             {
@@ -187,6 +198,7 @@ namespace CPE200Lab1
                 lblDisplay.Text = result;
             }
             isAfterEqual = true;
+
         }
 
         private void btnDot_Click(object sender, EventArgs e)
