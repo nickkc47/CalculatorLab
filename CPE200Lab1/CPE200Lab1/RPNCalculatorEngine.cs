@@ -32,8 +32,8 @@ namespace CPE200Lab1
                 }
                 if(isOperator(parts[i]))
                 {
-                    string first = RPNstack.Pop();
                     string second = RPNstack.Pop();
+                    string first = RPNstack.Pop();
 
                     result = calculate(parts[i], first, second);
 
