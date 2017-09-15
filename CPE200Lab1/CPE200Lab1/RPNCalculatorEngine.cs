@@ -10,6 +10,7 @@ namespace CPE200Lab1
     {
         public new string Process(string str)
         {
+            if (str == null || str == "") return "E"; //Set E
             Stack<string> rpnStack = new Stack<string>();
             List<string> parts = str.Split(' ').ToList<string>();
             string result;
