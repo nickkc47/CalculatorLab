@@ -19,7 +19,7 @@ namespace CPE200Lab1
         private string firstOperand;
         private string secondOperand;
         private string operate;
-        CalculatorEngine engine;
+        private SimpleCalculatorEngine engine;
         private double memory;
         double Mplus;
         double Mminus;
@@ -42,7 +42,7 @@ namespace CPE200Lab1
         {
             InitializeComponent();
             memory = 0;
-            engine = new CalculatorEngine();
+            engine = new SimpleCalculatorEngine();
             resetAll();
         }
 
